@@ -22,3 +22,18 @@ public:
         stocks.push_back(std::make_pair(stock, quantity));
         std::cout << "Bought " << quantity << " shares of " << stock.name << " at $" << stock.price << "." << std::endl;
     }
+     void sellStock(const std::string& stockName, int quantity) {
+        for (auto& pair : stocks) {
+            if (pair.first.name == stockName) {
+                if (pair.second >= quantity) {
+                    pair.second -= quantity;
+                    std::cout << "Sold " << quantity << " shares of " << stockName << "." << std::endl;
+                    return;
+                } else {
+                    std::cout << "Not enough shares to sell." << std::endl;
+                    return;
+                }
+            }
+        }
+        std::cout << "Stock not found in portfolio." << std::endl;
+    }
