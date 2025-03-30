@@ -37,3 +37,10 @@ public:
         }
         std::cout << "Stock not found in portfolio." << std::endl;
     }
+ void showPortfolio() {
+        std::cout << "Current Portfolio:" << std::endl;
+        for (const auto& pair : stocks) {
+            std::cout << pair.first.name << ": " << pair.second << " shares at $" << pair.first.price << " each." << std::endl;
+        }
+    }
+};
