@@ -52,4 +52,9 @@ public:
     void addStock(const Stock& stock) {
         stocks.push_back(stock);
     }
-
+ void updatePrices() {
+        for (auto& stock : stocks) {
+            float randomChange = ((rand() % 200) - 100) / 100.0f; // Random change between -1 and 1
+            stock.updatePrice(stock.price + randomChange);
+        }
+    }
