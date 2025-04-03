@@ -44,3 +44,12 @@ public:
         }
     }
 };
+class StockMarket {
+private:
+    std::vector<Stock> stocks;
+
+public:
+    void addStock(const Stock& stock) {
+        stocks.push_back(stock);
+    }
+
