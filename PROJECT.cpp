@@ -58,3 +58,10 @@ public:
             stock.updatePrice(stock.price + randomChange);
         }
     }
+     void displayStocks() {
+        std::cout << "Available Stocks:" << std::endl;
+        for (const auto& stock : stocks) {
+            std::cout << stock.name << ": $" << stock.price << std::endl;
+        }
+    }
+};
