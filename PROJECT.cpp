@@ -65,3 +65,20 @@ public:
         }
     }
 };
+int main() {
+    srand(static_cast<unsigned>(time(0))); // Seed for random number generation
+
+    StockMarket market;
+    Portfolio myPortfolio;
+
+    // Adding stocks to the market
+    market.addStock(Stock("AAPL", 150.00));
+    market.addStock(Stock("GOOGL", 2800.00));
+    market.addStock(Stock("TSLA", 700.00));
+
+    // Display available stocks
+    market.displayStocks();
+
+    // Simulate buying stocks
+    myPortfolio.buyStock(Stock("AAPL", 150.00), 10);
+    myPortfolio.buyStock(Stock("TSLA", 700.00), 5);
