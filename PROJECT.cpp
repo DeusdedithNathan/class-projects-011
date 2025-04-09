@@ -83,7 +83,11 @@ int main() {
     myPortfolio.buyStock(Stock("AAPL", 150.00), 10);
     myPortfolio.buyStock(Stock("TSLA", 700.00), 5);
     
-    
-    // Update stock prices
+   
+     // Update stock prices
     market.updatePrices();
+  
+     // Display updated stocks
+    market.displayStocks();
+
 
