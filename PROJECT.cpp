@@ -82,3 +82,8 @@ int main() {
     // Simulate buying stocks
     myPortfolio.buyStock(Stock("AAPL", 150.00), 10);
     myPortfolio.buyStock(Stock("TSLA", 700.00), 5);
+    
+    
+    // Update stock prices
+    market.updatePrices();
+
