@@ -89,5 +89,15 @@ int main() {
   
      // Display updated stocks
     market.displayStocks();
+    
+       // Show current portfolio
+    myPortfolio.showPortfolio();
+
+    // Simulate selling stocks
+    myPortfolio.sellStock("AAPL", 5);
+    myPortfolio.showPortfolio();
+
+    return 0;
+}
 
 
